@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.nav-bar {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #fff;
+}
+
+.spacer {
+    height: 80px;
+}
+
+.hero {
+    position: relative;
+    padding-top: 140px;
+    text-align: center;
+    padding-bottom: 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.glow-bg {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(243,156,18,0.15) 0%, transparent 70%);
+    animation: pulseGlow 5s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 1;
+    }
+}
+
+.typewriter-text {
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #fff;
+    width: 0;
+    margin: auto;
+    animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+    z-index: 2;
+    position: relative;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent }
+    50% { border-color: #fff }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1.5s ease 3.5s forwards;
+}
+
+.cta {
+    opacity: 0;
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #f39c12;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s;
+    animation: fadeIn 1.5s ease 4.2s forwards;
+}
+
+.cta:hover {
+    background: #d35400;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+.skills {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #f39c12;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: #1e1e1e;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+            0 0 15px rgba(243, 156, 18, 0.7),
+            0 0 30px rgba(243, 156, 18, 0.5),
+            0 0 45px rgba(243, 156, 18, 0.3);
+}
+
+
+.projects-highlight {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.projects-highlight h2 {
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+    color: #f39c12;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.socials a {
+    margin: 0 1rem;
+    color: #aaa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #fff;
+}
+
+

@@ -1,0 +1,129 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar {
+    width: 96%;
+    padding: 1rem 2rem;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.nav-bar a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a.active,
+.nav-bar a:hover {
+    color: #fff;
+}
+
+.content {
+    padding-top: 100px;
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+.about-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.about-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    animation: zoomOutImage 2.8s ease forwards;
+}
+
+.zoom-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    transform: scale(1.5);
+    animation: zoomImage 2.5s ease forwards;
+}
+
+@keyframes zoomImage {
+    0% {
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealText 2s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes revealText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tagline {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #fff;
+}
+
